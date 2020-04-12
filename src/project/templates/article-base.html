@@ -1,0 +1,25 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link href="{% static 'style-article.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <div class="content">
+            <div class="blog">@ Pharm Blog</div>
+            <nav class="blog">Home About Contact</nav>
+        </div>
+    </header>
+    <div class="container">
+      <div class="article-image"></div>
+      <div class="article-text">{% block text %}{%endblock%} </div>
+    </div>
+    <footer>
+      <a href="{% url 'index:index' %}" class="footer-a">Home</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Pharm Blog{% endblock %}
+{% block container %}
+        <aside>
+          <div class="logo"><img src="{% static 'logo.png'%}"></div>
+          <div class="about">Pharm Blog is a litle blog with some pharmacologycal information.</div>
+          <div class="featured"></div>
+        </aside>
+        <div class="main_content">
+            <div class="article_prew-1">
+              <div class="article_image-1"></div>
+              <div class="article_txt-1"><span> Antiviral drugs.</span> <br>
+                <br>Are a class of medication used specifically for 
+                treating viral infections rather than bacterial ones. 
+                Most antivirals are used for specific viral infections, 
+                while a broad-spectrum antiviral is effective against.. <a href="{% url 'article_one:article_one' %}">Read more</a></div>
+            </div>
+            <div class="article_prew-2">
+              <div class="article_image-2"></div>
+              <div class="article_txt-2"><span>Antidepressants</span> <br>
+                <br>Are medications used to 
+                treat major depressive disorder, some anxiety disorders, 
+                some chronic pain conditions, and to help <br> manage 
+                some <br> addictions. <a href="#">Read more</a>
+              </div>
+            </div>
+            <div class="article_prew-3">
+              <div class="article_image-3"></div>
+              <div class="article_txt-3"> <span>Antihypertensives</span> <br>
+                <br>Are a class of drugs 
+                that are used to treat hypertension 
+                (high blood pressure). 
+                Antihypertensive therapy seeks to prevent 
+                the complications<br>
+                 of high blood pressure, 
+                such as stroke and.. <a href="#">Read more</a> </div>
+            </div>
+        </div>
+    {%endblock%}
