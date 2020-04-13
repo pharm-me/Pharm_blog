@@ -9,10 +9,10 @@ development:
   DEBUG: true
 
 heroku:
-  ALLOWED_HOSTS:
-    - .pharm-blog.herokuapp.com
-    - 127.0.0.1
-    - localhost
+  ALLOWED_HOSTS: [
+    '.pharm-blog.herokuapp.com',
+    '127.0.0.1',
+    'localhost',]
   DEBUG: false
 
 travis:
