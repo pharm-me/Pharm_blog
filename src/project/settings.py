@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 from os import getenv
 from pathlib import Path
 
+import dj_database_url
+from dynaconf import settings as _settings
+
 # Build paths inside the src like this: os.path.join(BASE_DIR, ...)
 PROJECT_DIR = Path(__file__).parent.resolve()
 BASE_DIR = PROJECT_DIR.parent.resolve()
@@ -23,17 +26,12 @@ REPO_DIR = BASE_DIR.parent.resolve()
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5*)9f7&lpo@jo4-0u2hmvg@#l(+$td2x42*1ic4=pjl*348g4^'
+SECRET_KEY = _settings.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = _settings.DEBUG
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-"pharm-blog.herokuapp.com",
-]
-
+ALLOWED_HOSTS = _settings.SECRET_KEY
 
 # Application definition
 
@@ -84,14 +82,13 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+_db_url = _settings.DATABASE_URL
+if _settings.ENV_FOR_DYNACONF == "heroku":
+    _db_url = getenv("DATABASE_URL")
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': (BASE_DIR / "db.sqlite3").as_posix(),
-    }
+    "default": dj_database_url.parse(_db_url, conn_max_age=600),
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

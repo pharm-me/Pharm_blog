@@ -29,6 +29,7 @@
 .python-version
 .ropeproject
 .scrapy
+.secrets.*
 .spyderproject
 .spyproject
 .static/
