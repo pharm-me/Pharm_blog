@@ -1,3 +1,7 @@
 from django.contrib import admin
+from django.contrib.admin import ModelAdmin
+from apps.index.models import ArticlePreview
 
-# Register your models here.
+@admin.register(ArticlePreview)
+class ArticlePreviewAdminModel(ModelAdmin):
+    pass
