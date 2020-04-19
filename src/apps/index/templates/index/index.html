@@ -16,22 +16,13 @@
             <div class="article_prew-2">
               <div class="article_image-2"></div>
               <div class="article_txt-2"><span>Antidepressants</span> <br>
-                <br>Are medications used to 
-                treat major depressive disorder, some anxiety disorders, 
-                some chronic pain conditions, and to help <br> manage 
-                some <br> addictions. <a href="#">Read more</a>
+                <br>{{ object.article_1 }} <a href="{% url 'article_two:article_two' %}">Read more</a>
               </div>
             </div>
             <div class="article_prew-3">
               <div class="article_image-3"></div>
               <div class="article_txt-3"> <span>Antihypertensives</span> <br>
-                <br>Are a class of drugs 
-                that are used to treat hypertension 
-                (high blood pressure). 
-                Antihypertensive therapy seeks to prevent 
-                the complications<br>
-                 of high blood pressure, 
-                such as stroke and.. <a href="#">Read more</a> </div>
+                <br>{{ object.article_2 }} <a href="{% url 'article_three:article_three' %}">Read more</a> </div>
             </div>
         </div>
     {%endblock%}

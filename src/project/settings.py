@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     # --- my apps ---
     "apps.index",
     "apps.article_one",
+    "apps.article_two",
+    "apps.article_three",
+
 ]
 
 MIDDLEWARE = [

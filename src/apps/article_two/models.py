@@ -1,5 +1,4 @@
 from django.db import models as m
 
 class ArticleContent (m.Model):
-    article_one_content = m.TextField(null=True, blank=True)
-
+    article_two_content = m.TextField(blank=True, null=True)
