@@ -5,3 +5,4 @@ from apps.index.models import ArticlePreview
 @admin.register(ArticlePreview)
 class ArticlePreviewAdminModel(ModelAdmin):
     pass
+

@@ -54,6 +54,10 @@ header{
     margin: 10px;
     background-color: white;
 }
+ .article-time{
+    color:red;
+    font-style:italic;
+}
 footer{
     margin-top: 15px;
     margin-bottom: 15px;

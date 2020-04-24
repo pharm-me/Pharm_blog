@@ -11,7 +11,7 @@
             <div class="article_prew-1">
               <div class="article_image-1"></div>
               <div class="article_txt-1"><span> Antiviral drugs.</span> <br>
-                <br>{{ object.article }} <a href="{% url 'article_one:article_one' %}">Read more</a></div>
+                <br>{{ object.article | safe }} <a href="{% url 'article_one:article_one' %}">Read more</a></div>
             </div>
             <div class="article_prew-2">
               <div class="article_image-2"></div>

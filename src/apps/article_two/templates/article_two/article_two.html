@@ -3,5 +3,5 @@
 {% block title %}Antiviral{% endblock %}
 {% block css_link %}<link href="{% static 'style-article-1.css' %}" rel="stylesheet">{% endblock %}
 {% block text %}
-{{ object.article_two_content }}
+{{ object.article_two_content | safe }}
 {% endblock %}
