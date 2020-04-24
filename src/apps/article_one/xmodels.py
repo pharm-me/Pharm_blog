@@ -1,3 +1,5 @@
+
+
 class Technology(m.Model):
     name = m.TextField(unique=True)
     d = m.DateField(null=True, blank=True)

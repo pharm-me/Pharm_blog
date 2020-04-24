@@ -44,8 +44,9 @@ header{
 }
 .article-image{
     min-width: 750px;
-    height: 300px;
-    background: url("heart.jpg") no-repeat left;
+    min-height: 300px;
+    background: url("heart.jpg") no-repeat top;
+    background-size: cover;
     background-color: black;
     border-radius: 5px;
     margin-bottom:10px;

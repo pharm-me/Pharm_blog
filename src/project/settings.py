@@ -16,6 +16,9 @@ from pathlib import Path
 import dj_database_url
 from dynaconf import settings as _settings
 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
 # Build paths inside the src like this: os.path.join(BASE_DIR, ...)
 PROJECT_DIR = Path(__file__).parent.resolve()
 BASE_DIR = PROJECT_DIR.parent.resolve()
@@ -134,3 +137,12 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = REPO_DIR / ".static"
+
+sentry_sdk.init(
+    dsn="https://22dac16e43e2482da05c7e03790db8c1@o383056.ingest.sentry.io/5212838",
+    integrations=[DjangoIntegration()],
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
+)

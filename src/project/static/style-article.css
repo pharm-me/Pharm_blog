@@ -55,8 +55,12 @@ header{
     background-color: white;
 }
  .article-time{
-    color:red;
+    text-align:right;
     font-style:italic;
+    margin:10px;
+}
+.comment{
+margin:10px;
 }
 footer{
     margin-top: 15px;
