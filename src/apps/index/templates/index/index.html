@@ -3,26 +3,24 @@
 {% block title %} Pharm Blog{% endblock %}
 {% block container %}
         <aside>
-          <div class="logo"><img src="{% static 'logo.png'%}"></div>
-          <div class="about">Pharm Blog is a litle blog with some pharmacologycal information.</div>
+          <div class="about"></div>
           <div class="featured"></div>
         </aside>
         <div class="main_content">
             <div class="article_prew-1">
               <div class="article_image-1"></div>
-              <div class="article_txt-1"><span> Antiviral drugs.</span> <br>
-                <br>{{ object.article | safe }} <a href="{% url 'article_one:article_one' %}">Read more</a></div>
+              <div class="article_txt-1">{{ object.article | safe }} <a href="{% url 'article_one:article_one' %}">Read more</a></div>
             </div>
             <div class="article_prew-2">
               <div class="article_image-2"></div>
-              <div class="article_txt-2"><span>Antidepressants</span> <br>
-                <br>{{ object.article_1 }} <a href="{% url 'article_two:article_two' %}">Read more</a>
+              <div class="article_txt-2">
+                  <span></span>
+                  {{ object.article_1 | safe}} <a href="{% url 'article_two:article_two' %}">Read more</a>
               </div>
             </div>
             <div class="article_prew-3">
               <div class="article_image-3"></div>
-              <div class="article_txt-3"> <span>Antihypertensives</span> <br>
-                <br>{{ object.article_2 }} <a href="{% url 'article_three:article_three' %}">Read more</a> </div>
+              <div class="article_txt-3">{{ object.article_2 | safe }} <a href="{% url 'article_three:article_three' %}">Read more</a> </div>
             </div>
         </div>
     {%endblock%}
