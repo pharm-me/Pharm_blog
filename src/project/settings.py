@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "apps.article_one",
     "apps.article_two",
     "apps.article_three",
+    "apps.contact",
 
 ]
 

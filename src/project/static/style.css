@@ -74,7 +74,6 @@ font-size:25px;
 font-weight: bold;
 padding:10px;
 border-radius:5px;
-background-color:gray;
 }
 
 .container{
@@ -214,15 +213,19 @@ height:25px;
 position:absolute;
 }
 
-.link_text{
-margin-left:35px;
+
+.link_text {
+margin-left:0px;
+text-decoration:none;
 font-family:'Lato', sans-serif;
     font-style: normal;
     font-weight:400;
     line-height:26px;
     font-size: 22px;
     color:#aaaaaa;
+
 }
 .link_text:hover{
  color:#333333;
 }
+

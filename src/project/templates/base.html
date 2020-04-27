@@ -15,6 +15,26 @@
         </div>
     </header>
     <div class="container">
+     <aside>
+            <div class="link_box">
+                <div class="link_img"></div>
+                <div class="link_text">Home</div>
+            </div>
+            <div class="link_box">
+                 <div class="link_img"></div>
+                 <div class="link_text">Featured</div>
+            </div>
+            <div class="link_box">
+                 <div class="link_img"></div>
+                 <div class="link_text">About</div>
+            </div>
+            <div class="link_box">
+                 <div class="link_img"></div>
+                <div class="link_text"><a class="link_text" href="{% url 'contact:contact' %}"> Contact</a></div>
+            </div>
+            <div class="link_box"></div>
+        </aside>
+
         {% block container %}{% endblock %}
     </div>
   </body>
