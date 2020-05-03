@@ -175,7 +175,7 @@ position:absolute;
 
 
 .link_text {
-margin-left:0px;
+margin-left:20px;
 text-decoration:none;
 font-family:'Lato', sans-serif;
     font-style: normal;
@@ -188,4 +188,6 @@ font-family:'Lato', sans-serif;
 .link_text:hover{
  color:#333333;
 }
-
+.fas{
+font-size:20px;
+}

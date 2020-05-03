@@ -6,6 +6,7 @@
     <title>{% block title %}{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="{% static 'style.css' %}" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/3b453ad686.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -16,38 +17,38 @@
     <div class="container">
      <aside>
             <div class="link_box">
-                <div class="link_img"></div>
+                <div class="link_img"><i class="fas fa-home"></i></div>
                 <div class="link_text"><a class="link_text" href="{% url 'index:index' %}"> Home</a></div>
             </div>
             <div class="link_box">
-                 <div class="link_img"></div>
-                 <div class="link_text">Featured</div>
+                 <div class="link_img"><i class="fas fa-list"></i></div>
+                 <div class="link_text"><a class="link_text" href="{% url 'index:index' %}">Featured</a></div>
             </div>
             <div class="link_box">
-                 <div class="link_img"></div>
-                 <div class="link_text">About</div>
+                 <div class="link_img"><i class="fas fa-book-open"></i></div>
+                 <div class="link_text"><a class="link_text" href="{% url 'index:index' %}">About</a></div>
             </div>
             <div class="link_box">
-                 <div class="link_img"></div>
+                 <div class="link_img"><i class="fas fa-address-card"></i></div>
                 <div class="link_text"><a class="link_text" href="{% url 'contact:contact' %}"> Contact</a></div>
             </div>
 
          {% if request.user.is_authenticated %}
           <div class="link_box">
-                 <div class="link_img"></div>
+                 <div class="link_img"><i class="fas fa-newspaper"></i></div>
                 <div class="link_text"><a class="link_text" href="{% url 'create_article' %}">New Article</a></div>
             </div>
          <div class="link_box">
-                 <div class="link_img"></div>
+                 <div class="link_img"><i class="fas fa-sign-out-alt"></i></div>
                 <div class="link_text"><a class="link_text" href="{% url 'logout' %}"> Log out</a></div>
             </div>
          {% else %}
           <div class="link_box">
-                 <div class="link_img"></div>
+                 <div class="link_img"><i class="fas fa-sign-in-alt"></i></div>
                 <div class="link_text"><a class="link_text" href="{% url 'login' %}"> Log in</a></div>
             </div>
          <div class="link_box">
-                 <div class="link_img"></div>
+                 <div class="link_img"><i class="fas fa-user-plus"></i></div>
                 <div class="link_text"><a class="link_text" href="{% url 'signup' %}"> Sign up</a></div>
             </div>
          {% endif %}
