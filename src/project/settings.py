@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "apps.index",
     "apps.article_one",
     "apps.contact",
+    "apps.create_article",
 
 ]
 

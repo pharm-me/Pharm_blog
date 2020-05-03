@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+<h1> Create your article</h1>
+{% block container %}
+<h1> Create your article</h1><br>
+<form method="post">
+                  {% csrf_token %}
+                  {{form.as_p}}
+    <button type="submit" class="btn"> Post </button>
+</form>
+{% endblock %}

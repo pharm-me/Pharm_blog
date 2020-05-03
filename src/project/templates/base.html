@@ -35,6 +35,10 @@
          {% if request.user.is_authenticated %}
           <div class="link_box">
                  <div class="link_img"></div>
+                <div class="link_text"><a class="link_text" href="{% url 'create_article' %}">New Article</a></div>
+            </div>
+         <div class="link_box">
+                 <div class="link_img"></div>
                 <div class="link_text"><a class="link_text" href="{% url 'logout' %}"> Log out</a></div>
             </div>
          {% else %}
