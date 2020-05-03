@@ -48,8 +48,6 @@ INSTALLED_APPS = [
     # --- my apps ---
     "apps.index",
     "apps.article_one",
-    "apps.article_two",
-    "apps.article_three",
     "apps.contact",
 
 ]
@@ -133,11 +131,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
 STATICFILES_DIRS = [
     PROJECT_DIR/ "static",
 ]
 
 STATIC_ROOT = REPO_DIR / ".static"
+MEDIA_ROOT = REPO_DIR / ".images"
 
 sentry_sdk.init(
     dsn="https://22dac16e43e2482da05c7e03790db8c1@o383056.ingest.sentry.io/5212838",

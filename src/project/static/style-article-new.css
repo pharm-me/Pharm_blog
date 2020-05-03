@@ -82,8 +82,44 @@ border-radius:5px;
     margin-right: auto;
     display: grid;
     grid-template-columns:200px 280px 240px;
-    grid-template-rows: auto;
+    grid-template-rows: 200px 200px 200px auto;
     gap:15px;
+}
+.main_content{
+    display:flex;
+    flex-direction: column;
+    min-width: 539px;
+    grid-row-start: 1;
+    grid-row-end: 9;
+    grid-column-start:2;
+    grid-column-end: 3;
+    background-color:white;
+    border-radius: 5px;
+    padding:5px;
+    overflow: hidden;
+}
+
+img{
+width:100%;
+}
+.article-image{
+    height:300px;
+    width:100%;
+    background-color: black;
+    overflow:hidden;
+    margin-bottom:0px;
+
+}
+.article-text{
+    margin: 0px;
+    padding:5px;
+
+
+ .article-time{
+    text-align:right;
+    font-style:italic;
+    margin:10px;
+}
 }
 aside{
     width:167px;
@@ -98,43 +134,29 @@ aside{
     border-radius: 7px;
 }
 
+.logo img{
+    width: 125px;
+    height: 125px;
+    margin-right: auto;
+    margin-left: 35px;
+    margin-top: 25px;
+
+}
+.about{
+    margin-top: 25px;
+    padding-left: 0px;
+    font-weight: bold;
+    text-align: center;
+}
 .main_content{
     width:541px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items:top;
     grid-row-start: 1;
     grid-row-end: 5;
     grid-column-start:2;
     grid-column-end: 4;
-}
-.article_prew{
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-    background-color: white;
-    width: 541px;
-    height: 233px;
-    border: 1px solid #E2E2E2;
-    border-radius: 7px;
-    margin-bottom:10px;
-
-}
-.article_image{
-    margin-top:20px;
-    padding-top:0px;
-    margin-left: 20px;
-    min-width: 175px;
-    height: 185px;
-    border-radius: 5px;
-    overflow:hidden;
-}
-
-.article_txt{
-    margin-top:20px;
-    margin-left: 20px;
-    margin-right:10px;
 }
 
 .link_box{
@@ -167,23 +189,3 @@ font-family:'Lato', sans-serif;
  color:#333333;
 }
 
-.loginform{
-display:flex;
-flex-direction:column;
-justify-content: center;
-align-items:center;
-margin-left:50px;
-font-size:20px;
-background-color:white;
-border: 1px solid #E2E2E2;
-border-radius: 7px;
-grid-row-start: 1;
-grid-row-end: 3;
-grid-column-start:2;
-grid-column-end: 4;
-}
-
-.signup{
-display:flex;
-flex-direction:column;
-}

@@ -12,6 +12,7 @@ dj-database-url = "*"
 dynaconf = {extras = ["yaml"],version = "*"}
 psycopg2 = "*"
 sentry-sdk = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"

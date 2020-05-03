@@ -4,20 +4,18 @@
 {% block container %}
 
         <div class="main_content">
-            <div class="article_prew-1">
-              <div class="article_image-1"></div>
-              <div class="article_txt-1">{{ object.article | safe }} <a href="{% url 'article_one:article_one' %}">Read more</a></div>
-            </div>
-            <div class="article_prew-2">
-              <div class="article_image-2"></div>
-              <div class="article_txt-2">
-                  <span></span>
-                  {{ object.article_1 | safe}} <a href="{% url 'article_two:article_two' %}">Read more</a>
+            {% for article in blog %}
+            <div class="article_prew">
+              <div class="article_image">
+                  <img src="{{ article.image.url }}">
+              </div>
+              <div class="article_txt"><span>{{article.article_title}}</span> <br>
+                  <span class="datetime">{{article.article_date}}</span>
+                  {{ article.article_text|truncatechars:200|safe}}
+                  <a href="{% url 'article_one' article.pk %}">Read more</a>
               </div>
             </div>
-            <div class="article_prew-3">
-              <div class="article_image-3"></div>
-              <div class="article_txt-3">{{ object.article_2 | safe }} <a href="{% url 'article_three:article_three' %}">Read more</a> </div>
-            </div>
+            {%endfor%}
+
         </div>
     {%endblock%}

@@ -1,8 +1,8 @@
-from django.views.generic import ListView
+from django.views.generic import DetailView
 
-from apps.article_one.models import ArticleContent
+from apps.index.models import ArticlePreview
 
 
-class IndexView(ListView):
+class ArticleView(DetailView):
     template_name = "article_one/article_one.html"
-    model = ArticleContent
+    model = ArticlePreview

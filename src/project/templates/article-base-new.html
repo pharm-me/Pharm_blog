@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="{% static 'style.css' %}" rel="stylesheet">
+    {% block css_link %}{% endblock %}
   </head>
   <body>
     <header>
@@ -14,7 +14,7 @@
         </div>
     </header>
     <div class="container">
-     <aside>
+      <aside>
             <div class="link_box">
                 <div class="link_img"></div>
                 <div class="link_text"><a class="link_text" href="{% url 'index:index' %}"> Home</a></div>
@@ -48,7 +48,13 @@
             </div>
          {% endif %}
         </aside>
-        {% block container %}{% endblock %}
+        <div class="main_content">
+      <div class="article-image">{% block image %}{%endblock%}</div>
+            <div class="article-title">{% block article_title %}{%endblock%} </div>
+      <div class="article-text">{% block text %}{%endblock%} </div>
+        <div class="article-time"> {% block time %}{%endblock%} </div>
+        </div>
+      <div/>
     </div>
   </body>
 </html>

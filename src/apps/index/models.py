@@ -1,13 +1,12 @@
 from django.db import models as m
 
-
 class ArticlePreview(m.Model):
-    article = m.TextField(null=True, blank=True)
-    article_1 = m.TextField(null=True, blank=True)
-    article_2 = m.TextField(null=True, blank=True)
-
+    article_title = m.TextField(null=True, blank=True)
+    article_text = m.TextField(null=True, blank=True)
+    article_date = m.DateTimeField(auto_now=True)
+    image = m.ImageField(null=True, blank=True)
     class Meta:
-        verbose_name_plural = "Article Preview"
+        verbose_name_plural = "Article"
 
     def __str__(self):
-        return "Article Preview"
+        return f'{self.article_title}'

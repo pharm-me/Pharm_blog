@@ -1,10 +1,16 @@
-{% extends "article-base.html" %}
+{% extends "article-base-new.html" %}
 {% load static %}
-{% block title %}Antiviral{% endblock %}
-{% block css_link %}<link href="{% static 'style-article.css' %}" rel="stylesheet">{% endblock %}
+{% block title %}{{object.article_title}}{% endblock %}
+{% block css_link %}<link href="{% static 'style-article-new.css' %}" rel="stylesheet">{% endblock %}
+{% block image %}
+<img class src="{{ object.image.url }}">
+{%endblock%}
+{% block article_title %}
+{{ object.article_title | safe }}
+{% endblock %}
 {% block text %}
-{{ object_list.0.article_one_content | safe }}
+{{ object.article_text | safe }}
 {% endblock %}
 {% block time %}
-{{  object_list.0.article_one_time }}
+{{  object.article_date }}
 {% endblock %}

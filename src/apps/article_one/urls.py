@@ -1,11 +1,7 @@
 from django.urls import path
 
-from apps.article_one.views import IndexView
-
-from apps.article_one.apps import ArticleOneConfig
-
-app_name = ArticleOneConfig.name
+from apps.article_one.views import ArticleView
 
 urlpatterns = [
-    path("", IndexView.as_view(), name="article_one"),
+    path('article_one/<int:pk>/', ArticleView.as_view(), name='article_one'),
 ]
