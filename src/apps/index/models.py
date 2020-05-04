@@ -1,5 +1,6 @@
 from django.db import models as m
 
+
 class ArticlePreview(m.Model):
     article_title = m.TextField(null=True, blank=True)
     article_text = m.TextField(null=True, blank=True)

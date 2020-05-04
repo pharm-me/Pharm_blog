@@ -6,8 +6,12 @@ default:
   SENTRY_DSN: ""
 
 development:
-  DEBUG: true
-
+ DATABASE_URL: "postgresql://yury:123@localhost:5432/tms"
+ SECRET_KEY: "5*)9f7&lpo@jo4-0u2hm48gvg@#l(+$td2x42*1ic4=pjl*34^"
+ ALLOWED_HOSTS: [
+  '.pharm-blog.herokuapp.com',
+  '127.0.0.1',
+  'localhost',]
 heroku:
   ALLOWED_HOSTS: [
     '.pharm-blog.herokuapp.com',
@@ -15,6 +19,18 @@ heroku:
     'localhost',]
   DEBUG: false
 
+
+test:
+  MODE_DEBUG: 1
+  MODE_PROFILING: 0
+  SECRET_KEY: "1"
+  SITE_ID: 1
+  DATABASE_URL: "postgresql://yury:123@localhost:5432/tms"
+  SECRET_KEY: "5*)9f7&lpo@jo4-0u2hm48gvg@#l(+$td2x42*1ic4=pjl*34^"
+  ALLOWED_HOSTS: [
+  '.pharm-blog.herokuapp.com',
+  '127.0.0.1',
+  'localhost',]
 travis:
  DATABASE_URL: "postgresql://postgres@localhost:5432/sd"
  DEBUG: true
