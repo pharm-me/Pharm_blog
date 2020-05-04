@@ -14,9 +14,8 @@ from os import getenv
 from pathlib import Path
 
 import dj_database_url
-from dynaconf import settings as _settings
-
 import sentry_sdk
+from dynaconf import settings as _settings
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the src like this: os.path.join(BASE_DIR, ...)

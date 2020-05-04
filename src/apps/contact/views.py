@@ -1,4 +1,5 @@
-from django.views.generic import ListView, TemplateView
+from django.views.generic import ListView
+from django.views.generic import TemplateView
 
 
 class ContactView(TemplateView):

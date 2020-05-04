@@ -1,4 +1,5 @@
 from django.views.generic import ListView
+
 from apps.index.models import ArticlePreview
 
 
